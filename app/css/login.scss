@@ -1,0 +1,26 @@
+#main.login {
+  background-color: $base-login-background;
+  border: 0;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    .header {
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
+  }
+
+  form {
+    width: 240px;
+    max-height: 400px;
+
+    input, button {
+      margin-top: 10px;
+      height: 40px;
+    }
+  }
+}

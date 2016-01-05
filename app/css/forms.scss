@@ -1,0 +1,43 @@
+form {
+  input, button {
+    vertical-align: baseline;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    cursor: default;
+    font-size: 13px;
+    border: none;
+    width: 100%;
+  }
+
+  input {
+    background: $form-input-background;
+    transition: box-shadow 0 ease-out;
+    box-shadow: 0 0 0 8px rgba(89, 175, 225, 0);
+    padding: 10px;
+    cursor: text;
+  }
+
+  input:focus {
+    box-shadow: 0 0 0 2px $form-button-background;
+    transition-duration: 0.3s;
+  }
+
+  input.ng-invalid.ng-dirty {
+    border: 1px solid $form-input-error-colour;
+  }
+
+  button {
+    background: $form-button-background;
+    color: $form-button-colour;
+    font-weight: bold;
+    cursor: hand;
+    padding: 0;
+
+    &:disabled {
+      background: $form-button-disabled-background;
+      color: $form-button-disabled-colour;
+      cursor: not-allowed;
+    }
+  }
+}

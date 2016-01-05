@@ -1,0 +1,161 @@
+#main.home {
+  .section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .content {
+      background-color: $base-background;
+      margin-bottom: 39px;
+      overflow-y: auto;
+      height: 100%;
+      width: 100%;
+
+      a {
+        display: block;
+        text-decoration: none;
+        outline: 0;
+
+        &:focus {
+          .row {
+            background-color: $base-selected-background !important;
+          }
+        }
+      }
+
+      .row {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .icons {
+          float: right;
+
+          .aui-iconfont-approve {
+            margin-left: 2px;
+            color: $home-status-success-color;
+          }
+
+          .aui-iconfont-error {
+            color: $home-status-fail-color;
+          }
+
+          .aui-badge {
+            top: -1px;
+            margin-left: 2px;
+            padding: 3px 5px 3px;
+            font-weight: normal;
+            color: #fff;
+          }
+        }
+
+        &.nav {
+          height: 50px;
+          padding: 0;
+          padding-top: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          background-color: $home-nav-background;
+          font-size: 14px;
+          color: #fff;
+
+          &.fail {
+            background-color: $home-nav-fail-background;
+          }
+
+          button {
+            outline: none;
+            border-color: transparent;
+            background-color: transparent;
+            box-shadow: none;
+            transform: rotate(90deg);
+          }
+
+          .aui-icon {
+            color: #fff;
+          }
+
+          .aui-badge {
+            color: #fff;
+            margin-top: 7px;
+            margin-right: 14px;
+            margin-left: 14px;
+          }
+        }
+
+        &.title {
+          height: 30px;
+          padding-top: 7px;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+          background-color: $home-repo-background;
+          border-bottom: 1px $home-border-colour solid;
+          border-top: 1px $home-border-colour solid;
+          color: $home-repo-color;
+
+          &:hover {
+            cursor: default;
+          }
+        }
+
+        &.item {
+          font-size: 14px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          background-color: $base-background;
+          border-bottom: 1px solid $home-border-colour;
+          color: $home-color;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &:last-child {
+            border: 0;
+          }
+
+          &:hover {
+            cursor: hand;
+          }
+
+          .icons .aui-badge {
+            background-color: $home-status-fail-color;
+          }
+        }
+      }
+    }
+
+    .footer {
+      background: $home-footer-background url(../img/logo.svg) 162px 11px no-repeat;
+      border-top: 1px #ccc solid;
+      text-align: right;
+      position: fixed;
+      bottom: 0;
+      height: 40px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      .aui-icon {
+        position: absolute;
+        color: $home-footer-icon-background;
+
+        &:hover {
+          color: $base-color;
+          cursor: hand;
+        }
+      }
+
+      .aui-iconfont-locked {
+        top: 10px;
+        right: 10px;
+      }
+
+      .aui-iconfont-build {
+        left: 10px;
+        top: 10px;
+      }
+    }
+  }
+}

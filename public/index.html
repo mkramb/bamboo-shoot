@@ -1,0 +1,35 @@
+<html ng-app="app">
+  <head>
+
+    <meta charset="utf-8">
+    <title>BambooShoot</title>
+
+    <link rel="stylesheet" href="lib/aui/css/aui.css" media="all">
+    <link rel="stylesheet" href="app/app.css">
+
+    <script src="lib/jquery/js/jquery.min.js"></script>
+    <script src="lib/angular/js/angular.min.js"></script>
+    <script src="lib/mousetrap/js/mousetrap.min.js"></script>
+    <script src="lib/mousetrap/js/mousetrap-global-bind.js"></script>
+    <script src="lib/angular-mousetrap/js/keypress.js"></script>
+    <script src="lib/angular-ui-router/js/angular-ui-router.min.js"></script>
+    <script src="lib/angular-animate/js/angular-animate.min.js"></script>
+    <script src="app/app.js"></script>
+
+  </head>
+  <body>
+
+    <div id="main" class="{{ section }}" ng-show="!loading" ui-view></div>
+    <div id="loader" ng-show="loading">
+        <div class="loader-notification">
+            <div class="loader-notification-spinner">
+                <object data="img/spinner-animated.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="loader-notification-message">
+                Herding Pandas
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>

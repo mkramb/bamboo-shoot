@@ -1,0 +1,27 @@
+{
+  "name": "BambooShoot",
+  "version": "1.0.0",
+  "main": "index.html",
+  "single-instance": true,
+  "dom_storage_quota": 128,
+  "window": {
+    "title": "BambooShoot",
+    "icon": "img/app.png",
+    "toolbar": false,
+    "frame": false,
+    "width": 380,
+    "height": 454,
+    "min_width": 380,
+    "min_height": 460,
+    "resizable": false,
+    "show_in_taskbar": false,
+    "visible-on-all-workspaces": false,
+    "transparent": false,
+    "always-on-top": true,
+    "show": false
+  },
+  "dependencies": {
+    "lowdb": "^0.7.2",
+    "osx-notifier": "^0.2.1"
+  }
+}

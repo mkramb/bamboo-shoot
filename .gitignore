@@ -1,0 +1,9 @@
+node_modules/
+bower_components/
+public/node_modules/
+public/app/
+public/tpl/
+build/BambooShoot/
+cache/
+npm-debug.log
+.DS_Store

@@ -1,0 +1,18 @@
+<div class="section" ng-show="!loading">
+
+    <div class="header">
+      <img src="img/logo-bamboo.svg" alt="">
+    </div>
+
+    <form name="form" ng-submit="submit(form)" novalidate>
+      <input type="text" ng-model="form.hostname" placeholder="Hostname" ng-required="true" autofocus>
+      <input type="text" ng-model="form.username" placeholder="Username" ng-required="true">
+      <input type="password" ng-model="form.password" placeholder="Password" ng-required="true">
+      <button type="submit" ng-disabled="form.$invalid">Log in</button>
+    </form>
+
+    <div class="footer">
+      <img src="img/logo-atlassian-charlie.svg" alt="Bamboo">
+    </div>
+
+</div>

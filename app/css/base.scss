@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', arial, sans-serif;
+  overflow: hidden;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+
+  .section {
+    .footer {
+      padding: 0;
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .aui-icon {
+    color: $base-icon-color;
+  }
+}

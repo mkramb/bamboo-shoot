@@ -1,0 +1,15 @@
+[ui-view] {
+  &.ng-enter,
+  &.ng-leave {
+    transition: transform 0.5s;
+  }
+
+  &.ng-enter {
+    z-index: 1;
+    transform: translateY(-100%);
+  }
+
+  &.ng-enter-active {
+    transform: translateY(0);
+  }
+}

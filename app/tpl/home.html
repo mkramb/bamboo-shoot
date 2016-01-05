@@ -1,0 +1,51 @@
+<div class="section" mousetrap-keypress="myKeybindings">
+  <div class="content">
+
+    <div ng-show="branch">
+      <div class="nav row" ng-class="{ fail: branch.numberOfBuildFailures }">
+        <button ng-click="branch=null" class="aui-button aui-button-subtle" tabindex="-1">
+          <span class="aui-icon aui-icon-small aui-iconfont-down">Back</span>
+        </button>
+        <span class="aui-icon aui-icon-small aui-iconfont-devtools-branch"></span>
+        <span ng-if="branch.numberOfBuildFailures" class="icons">
+          <span class="aui-badge">{{ branch.numberOfBuildFailures }}</span>
+        </span>
+        {{ branch.branchName }}
+      </div>
+      <div class="title row">Plans</div>
+      <a href="#" ng-repeat="result in branch.resultSummaries" ng-click="open(result)">
+        <div class="item row">
+          <span class="icons">
+            <span ng-if="result.successful" class="aui-icon aui-icon-small aui-iconfont-approve">Successful</span>
+            <span ng-if="!result.successful" class="aui-icon aui-icon-small aui-iconfont-error">Failed</span>
+          </span>
+          {{ result.planName }}
+        </div>
+      </a>
+    </div>
+
+    <div ng-show="!branch" ng-repeat="repo in repos">
+      <div class="title row">{{ repo.name }}</div>
+      <a href="#" ng-repeat="branch in repo.branches track by track(branch)" ng-click="select(branch)">
+        <div class="item row">
+          <span class="aui-icon aui-icon-small aui-iconfont-devtools-branch"></span>
+          <span class="icons">
+            <span ng-if="branch.numberOfBuildFailures == 0" class="aui-icon aui-icon-small aui-iconfont-approve">Success</span>
+            <span ng-if="branch.numberOfBuildFailures > 0">
+              <span class="aui-badge">{{ branch.numberOfBuildFailures }}</span>
+              <span class="aui-icon aui-icon-small aui-iconfont-error">Failed</span>
+            </span>
+          </span>
+          {{ branch.branchName }}
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <span class="aui-icon aui-icon-small aui-iconfont-build" ng-click="refresh()">Refresh</span>
+    <span class="aui-icon aui-icon-small aui-iconfont-locked" ng-click="logout()">Logout</span>
+  </div>
+
+</div>
